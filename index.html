@@ -1,15 +1,66 @@
 <html>
     <head>
+        
         <style>
+            table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .backDoor
+            {
+            background-color: #333;
+            position:relative;
+            width:50px;
+            height:50px;
             
-        </style>
+            margin: 0 auto;
+            margin-top:0px;
+            }
+
+            .door
+            {
+            background-color: brown;
+            position: relative;
+            top:0px;
+            left:0px;
+            width:50px;
+            height:50px;
+            
+            transform-origin: left;
+            /*Speed of the Door animation*/
+            transition: all 0.5s ease-in-out;
+            }
+
+            .doorOpen
+            {
+            /*prespectiv creates the door open effect*/
+            transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+            }
+
+            </style>
     </head>
     <body>
+
+       <!-- <div class="backDoor">
+            <div class="door">  
+            </div>
+          </div> -->
+
         <h1>KEK.de</h1>
         <table border id="advent">
-           <tr> <!-- 1. Reihe (1-6) -->
-                <td>1</td>
-                <td>2</td>
+           <tr > <!-- 1. Reihe (1-6) -->
+                <td>
+                    <div class = "backDoor">
+                        <div class="door">
+                            1
+                        </div>
+                    </div>
+                </td>
+                <td><div class = "backDoor">
+                    <div class="door">
+                        2
+                    </div>
+                </div></td>
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
@@ -42,8 +93,9 @@
                 <td>23</td>
                 <td>24</td>
             </tr> 
-
+    
 
         </table>
+        <script src="open.js"></script>
     </body>
 </html>
