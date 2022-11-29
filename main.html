@@ -6,7 +6,8 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
             table {
-
+                background-image: url("/img/2.jpeg");
+                background-repeat: no-repeat;
                 margin-left: auto;
                 margin-right: auto;
                 color: #ffffff;
@@ -29,7 +30,7 @@
             }
             .backDoor
             {
-            background-image: url("F:code/vogelfiete.github.io/img/1.jpeg");
+            background-image: url("/img/1.jpeg");
             background-repeat: no-repeat;
             background-size: 300px 300px;
             position:relative;
@@ -90,14 +91,14 @@
         <table cellspacing="15px" id="advent">
            <tr > <!-- 1. Reihe (1-4) -->
                 <td>
-                    <div class = "backDoor container" onclick="abc()">
+                    <div class = "backDoor container">
                     
-                        <div class = "door">
+                        <!--<div class = "door">
                             1
                             <img src="F:/code/vogelfiete.github.io/img/d1.jpg" id="myImg" height="0" width="0" alt="Hallo">
-                        </div>
-                        <div class="overlay">
-                            <div class="text">Hello World</div>
+                        </div>-->
+                        <div class="overlay" onclick="abc()">
+                            <div class="text" >1</div>
                         
                     </div>
                 </td>
