@@ -29,7 +29,8 @@
             }
             .backDoor
             {
-            background-color: #333;
+            background-image: url("/img/1.jpeg");
+            background-size: 100%;
             position:relative;
             width: 100%;
             height:100%;
@@ -57,11 +58,15 @@
             /*prespectiv creates the door open effect*/
             transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
             }
-
             .img {
-
+                width: 50%;
+                height: 50%;
+                opacity: 50;
             }
-
+            .imgopen {
+                opacity: 100%;
+            }
+           
             </style>
     </head>
     <body>
@@ -76,7 +81,7 @@
            <tr > <!-- 1. Reihe (1-6) -->
                 <td>
                     <div class = "backDoor">
-                        <img class="img" src="/img/Zeichenfläche 1.jpg">
+                        
                         <div class = "door">
                             1
                         </div>
@@ -221,5 +226,6 @@
 
         </table>
         <script src="open.js"></script>
+        <script src="image.js"></script>
     </body>
 </html>
