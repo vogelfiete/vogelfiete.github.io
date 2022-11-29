@@ -1,6 +1,6 @@
 <html>
     <head>
-        
+        <link rel="stylesheet" href="modal.css">
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -29,7 +29,7 @@
             }
             .backDoor
             {
-            background-image: url("/img/1.jpeg");
+            background-image: url("F:code/vogelfiete.github.io/img/1.jpeg");
             background-repeat: no-repeat;
             background-size: 300px 300px;
             position:relative;
@@ -78,14 +78,27 @@
           </div> -->
 
         <h1><center>Mausi Adventskalender</center></h1>
+
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+
+
         <table cellspacing="15px" id="advent">
            <tr > <!-- 1. Reihe (1-4) -->
                 <td>
-                    <div class = "backDoor">
-                        
+                    <div class = "backDoor container" onclick="abc()">
+                    
                         <div class = "door">
                             1
+                            <img src="F:/code/vogelfiete.github.io/img/d1.jpg" id="myImg" height="0" width="0" alt="Hallo">
                         </div>
+                        <div class="overlay">
+                            <div class="text">Hello World</div>
+                        
                     </div>
                 </td>
                 <td>
