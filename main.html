@@ -6,7 +6,7 @@
                 font-family: Arial, Helvetica, sans-serif;
             }
             table {
-                background-image: url("/img/2.jpeg");
+                background-image: url("F:code/vogelfiete.github.io/img/2.jpeg");
                 background-repeat: no-repeat;
                 margin-left: auto;
                 margin-right: auto;
@@ -30,13 +30,13 @@
             }
             .backDoor
             {
-            background-image: url("/img/1.jpeg");
+            background-image: url("F:code/vogelfiete.github.io/img/1.jpeg");
             background-repeat: no-repeat;
             background-size: 300px 300px;
             position:relative;
             width: 300px;
             height: 300px;
-            
+            opacity: 50%;
             margin: 0 auto;
             margin-top:0px;
             }
@@ -58,7 +58,7 @@
             .doorOpen
             {
             /*prespectiv creates the door open effect*/
-            transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+            transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-100deg);
             }
             .img {
                 width: 50%;
@@ -91,15 +91,15 @@
         <table cellspacing="15px" id="advent">
            <tr > <!-- 1. Reihe (1-4) -->
                 <td>
-                    <div class = "backDoor container">
+                    <div class = "backDoor" onclick="">
                     
-                        <!--<div class = "door">
+                        <div class = "door">
                             1
                             <img src="F:/code/vogelfiete.github.io/img/d1.jpg" id="myImg" height="0" width="0" alt="Hallo">
-                        </div>-->
-                        <img src="F:/code/vogelfiete.github.io/img/d1.jpg" id="myImg" height="0" width="0" alt="Hallo">
-                        <div class="overlay" onclick="abc()">
-                            <div class="text" >1</div>
+                        </div>
+                        <!-- <div class="overlay" onclick="abc()">
+                            <img src="F:/code/vogelfiete.github.io/img/d1.jpg" id="myImg" height="0" width="0" alt="Hallo">
+                            <div class="text" >1</div>-->
                         
                     </div>
                 </td>
@@ -247,6 +247,6 @@
 
         </table>
         <script src="open.js"></script>
-        <script src="image.js"></script>
+       <!-- <script src="image.js"></script>-->
     </body>
 </html>
