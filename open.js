@@ -2,9 +2,7 @@
 const elements = document.querySelectorAll('.door');
 const elementium = document.querySelectorAll('.backDoor')
 
-elements[0].addEventListener('click', function onClick() {
-  console.log('box clicked');
-});
+
 
 
 
@@ -33,9 +31,24 @@ span.onclick = function() {
 }
 
 
+elements[0].addEventListener('click', function onClick() {
+  var element = elements[0]
+  console.log('box clicked');
+  element.classList.toggle("doorOpen");
+  if (element.className === "door") {
+    element.classList.toggle("doorOpen");
+    }
 
+  else if (element.className != "door") { 
+    abc();
+    };
+});
 
+elementium[0].addEventListener('click', function adla() {
+  abc();
+})
 
+/*
     for (const element of elements) {
   
       element.addEventListener('click', function efg() {
@@ -56,6 +69,6 @@ span.onclick = function() {
     elementium[i].onClick = abc();
     console.log(i)
     } 
-  }
+  } */
 
   
