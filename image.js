@@ -5,7 +5,7 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-function abc(){
+function abc(){ 
   modal.style.display = "block";
   modalImg.src = img.src;
   captionText.innerHTML = img.alt;
