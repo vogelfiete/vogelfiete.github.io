@@ -70,9 +70,11 @@ elementium[0].addEventListener('click', function adla() {
 
 function checkday() {
   for (let days = 0; days <= day-1; days++) {
-    elements[days].addEventListener('click', function bla(){
-      elements[days].classList.toggle('doorOpen');
+    elementium[days].addEventListener('click', function bla(){
       abc(days);
+      if (elements[days].className === 'door') {
+        elements[days].classList.toggle('doorOpen');}
+      
     }) 
   }
 }
