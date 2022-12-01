@@ -1,9 +1,10 @@
 
 const elements = document.querySelectorAll('.door');
 const elementium = document.querySelectorAll('.backDoor')
+const date = new Date()
+day = date.getDate()
 
-
-
+console.log(day)
 
 
 
@@ -12,13 +13,13 @@ const elementium = document.querySelectorAll('.backDoor')
 var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
+const img = document.querySelectorAll(".myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-function abc(){ 
+function abc(day){ 
   modal.style.display = "block";
-  modalImg.src = img.src;
-  captionText.innerHTML = img.alt;
+  modalImg.src = img[day].src;
+  captionText.innerHTML = img[day].alt;
   console.log('lolll');
 }
 
@@ -30,7 +31,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-
+/*
 elements[0].addEventListener('click', function onClick() {
   var element = elements[0]
   console.log('box clicked');
@@ -40,14 +41,44 @@ elements[0].addEventListener('click', function onClick() {
     }
 
   else if (element.className != "door") { 
-    abc();
+    abc(0);
     };
 });
 
-elementium[0].addEventListener('click', function adla() {
-  abc();
+elements[1].addEventListener('click', function onClick() {
+  var element = elements[1]
+  console.log('box clicked');
+  element.classList.toggle("doorOpen");
+  if (element.className === "door") {
+    element.classList.toggle("doorOpen");
+    }
+
+  else if (element.className != "door") { 
+    abc(1);
+    };
+});
+
+elementium[1].addEventListener('click', function adla() {
+  abc(1);
 })
 
+elementium[0].addEventListener('click', function adla() {
+  abc(0);
+  checkday();
+}) */
+
+
+function checkday() {
+  for (let days = 0; days <= day-1; days++) {
+    elementium[days].addEventListener('click', function bla(){
+      abc(days);
+      if (elements[days].className === 'door') {
+        elements[days].classList.toggle('doorOpen');}
+      
+    }) 
+  }
+}
+checkday()
 /*
     for (const element of elements) {
   
@@ -70,5 +101,3 @@ elementium[0].addEventListener('click', function adla() {
     console.log(i)
     } 
   } */
-
-  
